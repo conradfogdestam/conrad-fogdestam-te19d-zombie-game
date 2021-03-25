@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Zombie Hunterz Gamerz</title>
+</head>
+
+<body class="startpage">
+            <h1 class="title">Zombie Hunterz Gamerz</h1>
+            <div class="boxter">
+                <div class="buttons text-center">
+                    <button type="button" onclick="easy()" class="btn btn-success btn-lg btn-block btn-huge">Very Ezi</button>
+                    <button type="button" onclick="medium()" class="btn btn-success btn-lg btn-block btn-huge">Kinda Hardz</button>
+                    <button type="button" onclick="hard()" class="btn btn-success btn-lg btn-block btn-huge">Very Difficultz</button>
+                </div>
+            </div>
+
+</body>
+<script>
+    function easy() {
+        localStorage.setItem("gamemode", "easy");
+        location.replace('main.html')
+    }
+    function medium() {
+        localStorage.setItem("gamemode", "medium");
+        location.replace('main.html')
+    }
+    function hard() {
+        localStorage.setItem("gamemode", "hard");
+        location.replace('main.html')
+    }
+
+</script>
+
+</html>
