@@ -6,14 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
     <title>ZOMBIE GAME</title>
 </head>
 
-<body class="gameover">
-    <div class="butoin">
-        <button type="button" onclick="back()" class="btn btn-success btn-lg">Back to start screen</button>
-    </div>
+<body style="background-image: url('Images/zombiegame_game_over_screen.png'); background-size: cover;" class="gameover">
+    <div class="startscreen d-flex align-items-center justify-content-center min-vh-100">
+        <div class="text-center gameoverheading">
+            <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 100px;">
+                GAME OVER
+            </h1>
+            <div class="buttons text-center">
+                <button type="button" onclick="back()" class="btn btn-success btn-lg">Main Menu</button>
+            </div>
+        </div>
+
 </body>
 
 </html>

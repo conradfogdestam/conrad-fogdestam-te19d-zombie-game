@@ -12,26 +12,21 @@
 }
 
 .boxter {
-    margin-left: 800px;
-    margin-right: 800px;
-    margin-top: 300px;
-    align-items: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 }
 
 .title {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 150px;
+    font-size: 100px;
 }
 
 .gameover {
-    background-image: url('Images/zombiegame_game_over_screen.jpg');
+    background-image: url('Images/zombiegame_game_over_screen.png');
     background-size: cover;
 }
-
-.butoin {
-    width: 2560px;
-    margin-top: 900px;
-    text-align: center;
+.buttons {
+    position: fixed;
+    top: 50%;
+    left: 50%;
 }
