@@ -12,15 +12,15 @@
 
 <body style="background-image: url('Images/zombie_game_background.jpg'); background-size: cover;" class="gameover">
     <div class="text-center fixed-bottom text-white">
-        <h1>Press 'spacebar' to go back</h1>
+        <h1>Press 'spacebar' to go back</h1><!--då spacebar function inte är en knapp på skärmen måste man visa med vanlig text istället-->
     </div>
 </body>
 
 </html>
 <script src='http://www.spelprogrammering.nu/simple.js'>
-    const gamemode = localStorage.getItem("gamemode");
+    const gamemode = localStorage.getItem("gamemode");///här hämtas gamemodet från startpage med hjälp av localstorage oc sätter det till konstant
 
-    if (gamemode === 'easy') {
+    if (gamemode === 'easy') {///olika gamemodes
         var amount = 12
         var speed = random(1,5)
     }
@@ -34,33 +34,33 @@
     }
 
 
-    var zombies = [];
+    var zombies = [];///listan för alla zombies
     var i = 0;
 
-    while (i < amount) {
+    while (i < amount) {///när du väljer gamemode så får du amount av zombies och så läggs motsvarande in i listan
         zombies.push({x: random(totalWidth), y: random(totalHeight), speed: speed});
         i += 1
     }
     
-    function update() 
+    function update() //update funktion ändrar zombies riktining beroende på musen 
     {
-        clearScreen();
+        clearScreen();//tar bort allt på skärmen sen sätts det till direkt efter fast lite annourlunda så det ser ut som att Zombiesarna rör på sig
 
         var i = 0;
 
         while (i < amount) {
             document.body.onkeyup = function(spacebar){
                 if(spacebar.keyCode == 32){
-                    location.replace("startpage.html")
+                    location.replace("startpage.html")/// Ändrar location till startpage om man klickar på spacebar
 
                 }
             }
-            var zombie = zombies[i]; 
+            var zombie = zombies[i]; ///zombie variabeln sätts till zombie listan
 
     
-            picture(zombie.x, zombie.y, 'Images/zombie_game_character_image.png')
+            picture(zombie.x, zombie.y, 'Images/zombie_game_character_image.png')///zombie bild
 
-            if (zombie.x < mouse.x)
+            if (zombie.x < mouse.x)       ///movement för zombiesarna
                 zombie.x += zombie.speed;
             else 
                 zombie.x -= zombie.speed;
@@ -74,7 +74,7 @@
             if (distance(mouse, zombie) < 8 ) 
             {
                 stopUpdate();
-                location.replace('gameover.html')
+                location.replace('gameover.html')///skickar dig till gameover page om distance är mindre än 8
             }
 
             i += 1;
